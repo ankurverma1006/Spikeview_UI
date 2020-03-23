@@ -1,0 +1,243 @@
+$canvasWidth: 100%;
+
+#audioPlayer {
+  display: none !important;
+}
+.audioPlayer {
+  //background-image: url(../img/track.png);
+  //background-repeat: no-repeat;
+  //background-position: center bottom;
+  position: relative;
+  background-size: 350px auto;
+  .audioControls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    top: 55px;
+    @include centeredBox();
+    justify-content: space-between;
+    max-width: 200px;
+    .btn {
+      padding: 0;
+      background-color: transparent;
+      color: $body_color !important;
+      font-weight: bold;
+      &.btnPlayPause {
+        -webkit-transform: scale(2);
+        -moz-transform: scale(2);
+        -ms-transform: scale(2);
+        -o-transform: scale(2);
+        transform: scale(2);
+        position: relative;
+        width: 35px;
+        height: 35px;
+      }
+      svg {
+        width: 35px;
+        height: 35px;
+      }
+
+      &.btnPlayPause {
+        svg {
+          &:nth-child(2) {
+            display: none;
+          }
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+        &.playing {
+          svg {
+            &:nth-child(2) {
+              display: block;
+            }
+
+            &:nth-child(1) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// add Tracks
+
+.addTracks {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding: 40px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  &.disabled {
+    &::before {
+      content: '';
+      background: rgba($white, 0.7);
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 199;
+    }
+  }
+
+  .addTrack--icon {
+    font-size: 70px;
+    margin: 0 20px;
+  }
+
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    // margin: 0 30px;
+    flex: 1;
+    text-align: center;
+  }
+}
+
+.canvasWrapper {
+  position: relative;
+  max-width: $canvasWidth;
+  margin: 0 auto;
+  min-height: 250px;
+}
+
+#oscilloscope {
+  width: 100%;
+  // height: 120px;
+  // margin-bottom: -6px;
+}
+
+$stopIcon_width: 50px;
+$stopIcon_height: $stopIcon_width;
+
+.recordingControls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  color: $brand-danger;
+  right: 0;
+  padding: 0;
+  top: 75px;
+  margin: auto;
+  width: 100%;
+
+  .btn {
+    background-color: transparent !important;
+    padding: 0;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-right: 20px; */
+    margin: 0 10px;
+    position: relative;
+    &.mic {
+      svg {
+        fill: $black;
+      }
+    }
+  }
+
+  svg {
+    // width: $stopIcon_width;
+    // height: $stopIcon_height;
+    max-width: 100%;
+    max-height: 100%;
+    background: transparent;
+    fill: $brand-danger;
+    border-radius: 100%;
+    margin-left: -$stopIcon_width / 2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .timer {
+    flex: 1 0 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #999;
+  }
+}
+
+.barsWrapper {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  @include transition(all, 0.5s);
+
+  &.stop_animating {
+    .bar {
+      -webkit-animation-play-state: paused; /* Safari 4.0 - 8.0 */
+      animation-play-state: paused;
+    }
+  }
+}
+
+.bars {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: $canvasWidth;
+  text-align: center;
+  overflow: hidden;
+  &.animatedBar {
+    $sum: 1px;
+    @for $i from 1 through 300 {
+      .bar {
+        &:nth-child(#{$i}) {
+          left: $sum;
+          $sum: $sum + 1.5px;
+          background: rgb(169, 185, 202);
+          animation-duration: (random(800) + 400) + ms;
+        }
+      }
+    }
+    &:nth-child(1) {
+      left: 1.5px !important;
+    }
+  }
+}
+
+.bar {
+  background: #666;
+  bottom: 1px;
+  height: 3px;
+  position: absolute;
+  width: 1px;
+  animation: sound 0ms -800ms linear infinite alternate;
+}
+
+@keyframes sound {
+  0% {
+    opacity: 0.35;
+    height: 3px;
+  }
+  100% {
+    opacity: 1;
+    height: 28px;
+  }
+}

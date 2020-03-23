@@ -1,0 +1,168 @@
+.dashTxt {
+  text-align: center;
+  font-size: 22px;
+  margin-top: 45px;
+}
+.dashBtnCenter {
+  .btn {
+    border-radius: 2px;
+    padding: 10px 15px !important;
+    font-size: 13px !important;
+    margin-bottom: 20px;
+  }
+}
+.btn-red {
+  background-color: #fff;
+  color: #c96e6e !important;
+  font-size: 12px;
+  padding: 5px 10px;
+  margin-left: 15px;
+}
+.btn-red:hover {
+  background-color: #f7f7f8;
+}
+.stuBgWhite {
+  padding: 21px 30px 15px;
+  background-color: #fff;
+}
+
+.DatepicInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pr0 {
+  padding-right: 0;
+}
+.pl0 {
+  padding-left: 0;
+}
+
+.summaryFirstLook
+{
+  margin-bottom: 40px;
+  .lead
+  {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #7f7f7f;
+    margin-top: 16px;
+    display: block;
+    margin: 27px 0 !important;
+  }
+  .orderedList
+  {
+    color: #7f7f7f;
+    font-size: 18px;
+    padding-left: 100px;
+    line-height: 1.4;
+    li
+    {
+      margin-bottom: 0.7 * $gutter-space;
+      padding-left: 10px;
+    }
+  }
+
+}
+
+
+.greytxt {
+  color: #788ca0;
+  font-style: italic;
+  font-size: 15px;
+  padding-left: 55px;
+  padding-top: 5px;
+}
+.profilemt20 {
+  margin: 20px 0px 40px;
+}
+.adfigimg {
+    display: block !important;
+    max-height: 160px !important;
+    overflow-x: inherit !important;
+    overflow-y: inherit !important;
+}
+.adfigCaption{
+    text-align: left;
+    margin: 15px 0px;
+    select{
+        width:100px;
+        margin:auto;
+        padding:6px 0px;
+    }
+    .form-group {
+        margin-right: -10px;
+    }
+    option {
+        font-size: 12px;
+    }
+    .form-control{
+        font-size: 12px;
+    }
+}
+
+.addMediaTxt {
+    text-align: center !important;
+    font-size: 16px !important;
+}
+.selectAddAch{
+    width: 190px;
+    margin: auto;
+    label{
+        margin-right: 40px;
+    }
+}
+.adselectIcon {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    > span
+    {
+      order: -1;
+      /* font-size: 18px; */
+      font-size: inherit;
+      margin-right: 5px;
+      font-size: 18px;
+      text-transform: uppercase;
+      /* font-weight: bold; */
+      position: relative;
+      top: 1px;
+      /* font-weight: 600; */
+    }
+}
+.caption_img {
+    background-color: #fbfbfb !important;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+// added for caption after image upload
+
+.add-more-boxes--wrapper
+{
+  &.withCaption
+  {
+    .amb--item.amb--item--images
+    {
+      max-height: 125px;
+
+      .amb--item--link
+      {
+        width: 125px;
+        height: 125px;
+      }
+    }
+   
+  }
+}
+

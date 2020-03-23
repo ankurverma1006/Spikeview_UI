@@ -1,0 +1,55 @@
+body.sharedView
+{
+  .main{
+    padding: 0;
+  }
+
+  .shareProfileShared
+  {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .profile-achievement-ariel-view
+    {
+      width: 100%;
+      //flex: 1;
+      margin: 15px 0;
+    }
+
+  }
+
+}
+
+
+.fixed--controls
+{
+  width: 100%;
+  z-index: 10;
+  left: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  position: fixed;
+
+  -webkit-box-shadow: inset 14px -80px 100px -60px #111;
+  -moz-box-shadow: inset 14px -80px 100px -60px #111;
+  box-shadow: inset inset 14px -80px 100px -60px #111;
+
+  //-webkit-box-shadow: inset -1px -80px 63px -35px #111;
+  //-moz-box-shadow: inset -1px -80px 63px -35px #111;
+  //box-shadow: inset -1px -80px 63px -35px #111;
+
+  &.bottom
+  {
+    bottom: 0;
+  }
+
+  .viewChanger
+  {
+    height: 40px;
+    background: white;
+  }
+}

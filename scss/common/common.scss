@@ -1,0 +1,113 @@
+input[type='file'] {
+  opacity: 0;
+  position: absolute;
+  max-width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.border-line {
+  height: 2px;
+  width: 100%;
+  background-color: $default-gray;
+}
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: $gray-lightest;
+  //border: 1px solid $gray;
+  border-bottom: 0;
+}
+
+.default-icon {
+  background-color: $profile-pic-default-bg;
+  width: 100%;
+  font-size: 2em;
+  color: $icon-color-default;
+  &.flat {
+    border-radius: 0;
+  }
+}
+
+.well {
+  background-image: none !important;
+  border-radius: 0 !important;
+  padding: 3 * $gutter-space;
+  border: 0;
+  box-shadow: none !important;
+}
+
+.light-bg {
+  background-color: $white;
+}
+
+.relative--box {
+  position: relative;
+}
+
+.thumbnail--img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-right: $gutter-space/2;
+  border: 1px solid $gray-lighter;
+  img,
+  .pp-default.small {
+    width: 100%;
+    height: 100%;
+  }
+  &.circle {
+    border-radius: 100%;
+    border: 1px solid $gray-light;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .pp-default.small {
+    font-size: 2.5em;
+    background-color: $profile-pic-default-bg;
+  }
+}
+
+/* Chrome/Safari and web-kit-based browsers
+   (if it doesn't work, try maybe also on the parent/wrapper)
+*/
+::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+.show-more {
+  @extend %show-more;
+  &:hover {
+    background-color: darken($white, 2%);
+  }
+}
+
+.logo {
+  width: 190px;
+  height: 100%;
+  background-image: url(../img/logo-white.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-indent: -9999px;
+  margin-left: 0;
+  @media (max-width: $breakpoint-mobile) {
+    margin-left: 10px;
+  }
+}

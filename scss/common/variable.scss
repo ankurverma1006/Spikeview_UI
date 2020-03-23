@@ -1,0 +1,114 @@
+$blue: #3b78e0;
+$body_color: #535353;
+$mute_color: #a9b9ca;
+$brand-success: #43a047;
+$brand-danger: #c73232;
+$brand-warning: orange;
+$brand-info: lighten($blue, 10%);
+$brand-danger-light: #ff2c33;
+$orange: #ff8000;
+$yellow: #ffe001;
+//$blue : #3e80c3;
+//$blue : #1f86e5;
+$placeholder-color: #a9b9ca;
+//$blue :#0073b1; /*linkedin blue*/
+$blue2: #1b72c3;
+$activeBlue: #42a3d4;
+$default-gray: #c8d3de;
+$dark-blue : #182f3f;
+$gray: #a9b9ca;
+$white: #fff;
+$black: #000;
+
+$gray-well: #f5f5f5;
+$gray-light: lighten($gray, 20%);
+$gray-lighter: lighten($gray, 30%);
+//$gray-lightest: lighten($gray, 50%);
+$gray-lightest: #f7f7f8;
+$gray-dark:#28334b;
+$gray-darker: #909090;
+$blue-shade-light : #79a2e8;
+$icon-color-default: #788ca0;
+$smiley-icon-color: #ffbe08;
+$nav-link-hover: rgba($black, 0.1);
+$border-both-line: #d4d4da;
+/*$border-both-line: #f7f7f7;*/
+$border-color-light: #dbdbdb;
+$border-color: $border-both-line;
+$border-radius: 0 !default;
+$inactive-icon-color: $icon-color-default;
+$active-icon-color: #002f5f;
+$chat-sidebar--width: 350px;
+$profile-sidebar-width: 250px;
+$profile-right-sidebar-width: $profile-sidebar-width;
+$right-sidebar-width: 308px;
+$navigation-wrapper-width: $profile-sidebar-width;
+$navbar-header-width: $navigation-wrapper-width;
+$header-height: 50px;
+$searchbox-width: 270px;
+$searchbox-width-mobile: 150px;
+$banner-height: 300px;
+$small-banner-height: 250px;
+$dark-nav-height: 35px;
+$background-translucent-default-dark : rgba($black, 0.13) !important;
+$background-translucent-default-light : rgba($white, 0.13) !important;
+$profile-pic-default-bg: #dae2ef;
+
+$english_gray: #8392a2;
+
+
+// validation colors
+$error-color: #b94a48;
+
+/* spaces variables */
+$gutter-space: 1rem;
+$padding-y: $gutter-space;
+$padding-x:$gutter-space;
+//$sidebar-gray: #a0bfe0;
+$sidebar-gray: #bbd2e9;
+$box-shadow-light-color: #0b243f;
+$box-shadow-default: 0 0 2px lighten($gray, 10%);
+
+
+//nav tabs content variables
+$tab-link-color: $icon-color-default;
+$tab-link-color-active: $blue;
+
+//modal
+$modal-title-color: $icon-color-default;
+$modal-border-color: $gray;
+//forms content variables
+$input-height: 40px;
+$input-bg : #f2f6f9;
+$input-color: $icon-color-default;
+$input-border-color : #ced8e2;
+$dropdown-text : #4e5963;
+$dropdown-link-hover-bg: #859bc0;
+
+// Carousel content variables
+$indicator-default-bg: #4e86c0;
+
+//buttons
+$transparent-btn-color : $dropdown-text;
+$btn-default-bg: #777;
+
+//breakpoints variables
+
+$breakpoint-mobile : 40em;
+$breakpoint-large-screen : 100em;
+$breakpoint-tablet : 65em;
+
+//icon moon content code
+
+$icomoon-next: '\e96b';
+$icomoon-previous: '\e96a';
+$icomoon-down: '\e90b';
+$icomoon-up: '\e90b';
+
+
+//Colors
+$sweet-blue:#5f7cfe;
+$carrot:#fd776c;
+$sweet-green:#ffbb00;
+$salt-green:#2de26f;
+$spice-green:#2ccbe1;

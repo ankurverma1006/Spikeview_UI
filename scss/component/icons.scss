@@ -1,0 +1,44 @@
+.iconsList {
+  //padding-left: 0;
+  //list-style:none;
+  //margin: 0;
+  //display: flex;
+  //flex-wrap: wrap;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  
+  grid-gap: 10px;
+  padding-left: 0;
+  list-style: none;
+  
+  li {
+    //flex:1 1 110px;
+    //position: relative;
+    
+    position: relative;
+    a {
+      @include centeredBox();
+      font-size: 9px;
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
+      line-height: 1.2;
+      text-transform: capitalize;
+      color: $gray;
+      height: 100%;
+      border: 1px solid $gray-lightest;
+      &:hover {
+        background-color: $gray-lightest;
+        + .hover-section {
+          max-height: 100%;
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .icon {
+    font-size: 36px;
+  }
+}

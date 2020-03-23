@@ -1,0 +1,95 @@
+.topbar {
+  background-color: $white;
+  width: 100%;
+  max-height: 60px;
+  @media(max-width: $breakpoint-mobile)
+  {
+    max-width: unset;
+  }
+  .fixed--topbar {
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    background-color: inherit;
+    z-index: 100;
+    box-shadow: $box-shadow-default;
+    padding: 5px 0;
+    @media(max-width: $breakpoint-mobile)
+    {
+      width: 100%;
+      position: unset;
+      top:0;
+    }
+  }
+
+  .share {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .u--topDetails {
+      width: 100%;
+      margin-bottom: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .user-details
+      {
+        flex: unset;
+      }
+      .user-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 0;
+      }
+
+      .ud--wrapper {
+        //flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .ud--right {
+          display: flex;
+          flex: 1;
+          justify-content: flex-end;
+          align-items: center;
+          .button--wrapper {
+            display: flex;
+            .btn {
+              margin: 0;
+              margin-left: $gutter-space;
+            }
+          }
+
+          .form-control {
+            &.small {
+              max-width: 250px;
+            }
+          }
+          @media(max-width: $breakpoint-mobile)
+          {
+            justify-content: flex-start;
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }
+
+  .viewChanger
+  {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    @media(max-width: $breakpoint-mobile)
+    {
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 0;
+    }
+  }
+
+
+
+}

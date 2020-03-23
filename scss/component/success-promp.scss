@@ -1,0 +1,56 @@
+$success__primary: #3DC480;
+$success__secondary: #B8BABB;
+
+.success-message {
+    text-align: center;
+    width: 100%;
+    height: calc(100vh - 50px);
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.success-message__icon {
+   width:75px;
+   height: 75px;
+   background-color:$success__primary;
+   border-radius: 100%;
+}
+
+.success-message__title {
+    color: $success__primary;    
+    .active & {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.success-message__content {
+    color: $success__secondary;    
+    .active & {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.icon-checkmark {
+    circle {
+        fill: $success__primary;
+        transform-origin: 50% 50%;
+        transform: scale(0);
+        transition: transform 200ms cubic-bezier(.22, .96, .38, .98);
+    }
+    path {
+        transition: stroke-dashoffset 350ms ease;
+        transition-delay: 100ms;
+    }
+    
+    .active & {
+        circle {
+            transform: scale(1);
+        }
+    }
+}

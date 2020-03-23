@@ -1,0 +1,149 @@
+.modal
+{
+  @include centeredBox();
+  margin: 0 auto;
+  display: flex !important;
+  
+  .modal-dialog
+  {
+    margin:0;
+  }
+  .modal-content
+  {
+    display: flex;
+    flex-direction:column;
+    max-height:95vh;
+    border-radius: 0;
+    box-shadow: none;
+
+    .modal-header, .modal-footer
+    {
+      border-color: $modal-border-color;
+      //padding: 2*$gutter-space 4*$gutter-space;
+      padding-top: $gutter-space;
+      padding-bottom: $gutter-space;
+      border-color: $border-color-light;
+      min-height: 50px;
+    }
+    .modal-header
+    {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .modal-title
+      {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color:$modal-title-color;
+        font-size:1.4em;
+        order: -1;
+        font-weight: normal;
+        text-align: left;
+        font-weight: normal;
+        flex: 1;
+      }
+    }
+    .modal-body
+    {
+      flex:1;
+      overflow-x: hidden;
+      overflow-y: auto;
+      color:$gray;
+      a
+      {
+        //color: $activeBlue;
+      }
+
+      &.height--425
+      {
+        .modal-content
+        {
+          height: 425px;
+        }
+      }
+    }
+  }
+  .close
+  {
+    @include circle(flex, 30px, 1px, solid, transparent);
+    @include centeredBox();
+    @include transition(ease-in-out, 0.5s);
+    opacity:1;
+    color: $gray-dark;
+    font-size: 1.2em;
+    opacity: 0.6;
+    &:hover {
+      opacity: 1;
+    }
+    > span {
+      @include centeredBox();
+      position: relative;
+      font-family: 'icomoon' !important;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 0;
+      &:before {
+        content: "\e94d";
+        font-size: 16px !important;
+        font-weight: bold;
+      }
+    }
+  }
+  
+  .fullPageModal {
+    width: 100%;
+    height: 100%;
+    .modal-content {
+      max-height: 100%;
+      height: 100%;
+      background-color: $black;
+      border: 0;
+      .modal-header {
+        border-color: $black;
+        box-shadow: 0 0 1px $gray;
+        padding: 10px 20px;
+        .modal-title {
+          color: $gray;
+        }
+        .close {
+          color: $gray;
+          opacity: 1;
+          //border-color: $gray;
+          border-color: transparent;
+          text-shadow: none;
+        }
+      }
+      
+      .modal-body {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.modal-lg {
+  //@media(min-width: $breakpoint-tablet)
+  //{
+  //  width: 675px;
+  //}
+}
+
+.modal-md {
+  @media(min-width: $breakpoint-tablet) {
+    width: 500px;
+  }
+}
+
+
+body.modal-open{
+  margin-right:0px!important;
+  padding-right:0px!important;
+  overflow: visible !important;
+}

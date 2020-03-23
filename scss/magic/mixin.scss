@@ -1,0 +1,178 @@
+@mixin circle($display-type, $width, $border-width, $border-type, $border-color)
+{
+  display: $display-type;
+  width: $width;
+  height: $width;
+  border-radius: ($width*2)/2;
+  border: $border-width $border-type $border-color;
+}
+
+@mixin square($display-type, $width, $border-width, $border-type, $border-color) {
+  display: $display-type;
+  width: $width;
+  height: $width;
+  border: $border-width $border-type $border-color;
+}
+
+@mixin squareBox($display-type, $width, $border-width, $border-type, $border-color)
+{
+  display: $display-type;
+  width: $width;
+  height: $width;
+  border-radius:$border-radius;
+  border: $border-width $border-type $border-color;
+}
+
+@mixin transition($transition-type, $duration)
+{
+  -webkit-transition: $transition-type $duration;
+  -moz-transition: $transition-type $duration;
+  -ms-transition: $transition-type $duration;
+  -o-transition: $transition-type $duration;
+  transition: $transition-type $duration;
+}
+
+//grid layout
+
+@mixin GridWithGaps($min-width, $max-width, $grid-gap) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-width, $max-width));
+  grid-gap: $grid-gap;
+}
+
+
+@mixin centeredBox()
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content: center;
+}
+.title--with--border
+{
+  position: relative;
+  margin-bottom:1.5* $gutter-space;
+  flex:1;
+  @include centeredBox();
+  &:before, &:after
+  {
+    width: 50%;
+    content: '';
+    height:1px;
+    background-color: $border-both-line;
+    position: absolute;
+    @include centeredBox();
+  }
+  &:before
+  {
+    left:0;
+  }
+
+  &:after{
+    right: 0;
+  }
+  p
+  {
+    font-size:1.3em;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    padding: 0 2*$gutter-space;
+    color:$gray-dark;
+    letter-spacing:0;
+    background-color: lighten($gray, 25%);
+  }
+  
+  &.rightSide {
+    
+    justify-content: flex-start;
+    &:before {
+      width: 0;
+    }
+    &:after {
+      width: 100%;
+    }
+    p {
+      padding-left: 0;
+    }
+  }
+  
+  &.leftSide {
+    
+    justify-content: flex-end;
+    &:after {
+      width: 0;
+    }
+    &:before {
+      width: 100%;
+    }
+    p {
+      padding-right: 0;
+    }
+  }
+}
+
+@mixin triangle($border-width, $border-color) {
+  width: 0;
+  height: 0;
+  border-top: $border-width solid transparent;
+  border-bottom: $border-width solid $border-color;
+  border-left: $border-width solid transparent;
+  border-right: $border-width solid transparent;
+}
+
+.ma {
+  margin: 0 auto !important;
+}
+
+%my-icon-css {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.noti--count {
+  @include circle(flex, 15px, 1px, solid, white);
+  @include centeredBox;
+  font-size: 8px;
+  border: 1px solid $blue;
+  font-weight: bold;
+  background: $blue;
+  color: $white;
+  margin-left: $gutter-space;
+}
+
+
+// word wrap long words
+
+@mixin wordWrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+@mixin ellipses($maxwidth)
+{
+  overflow: hidden;
+  max-width: $maxwidth;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
+
+

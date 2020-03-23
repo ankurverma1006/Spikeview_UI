@@ -1,0 +1,139 @@
+.flex
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nowrap
+{
+  flex-wrap:nowrap !important;
+}
+
+.flex-column
+{
+  flex-direction:column;
+}
+
+.flex-center
+{
+  align-items:center;
+  justify-content: center;
+}
+
+.justify-content-between
+{
+  justify-content: space-between;
+}
+
+.box
+{
+  @include squareBox(block, 160px, 1px, solid, $input-border-color);
+  color:$icon-color-default;
+  position: relative;
+  background-color: $input-bg;
+  border-color: $input-border-color;
+  margin-bottom: $gutter-space * 1.5;
+}
+
+.fullWidth
+{
+  width: 100%;
+}
+
+
+.centeredBox-lg
+{
+  max-width:948px;
+  width:948px;
+  margin: 20px auto;
+}
+
+
+.centeredImg{
+  margin:0 auto;
+  display: block;
+  max-width: 100%;
+}
+
+
+.flex-1
+{
+  flex: 1;
+}
+
+.main
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.centeredBox
+{
+  @include centeredBox();
+}
+
+
+section
+{
+  border-bottom: 1px solid $border-color;
+  //margin-bottom: 2*$gutter-space;
+  padding:  2*$gutter-space 0;
+  &:nth-child(1) {
+    border: 0;
+  }
+}
+
+.section-topbar
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items:center;
+  justify-content:space-between;
+}
+
+
+.card
+{
+  border: 1px solid $border-color-light;
+  padding:2*$gutter-space;
+  //margin: $gutter-space 0;
+  &.p-0 {
+    padding: 0;
+  }
+}
+
+.default-icon {
+  @include centeredBox;
+  @include circle(flex, 75px, 0, solid, transparent);
+  font-size: 3em;
+}
+
+.home {
+  .profile-sidebar {
+    margin-top: 0;
+  }
+  .profile-sidebar--box {
+    margin-bottom: 0;
+    max-width: 250px;
+    @media(max-width: $breakpoint-mobile)
+    {
+      max-width: 100% !important;
+    }
+  }
+}
+
+.pt--80 {
+  padding-top: 80px !important;
+}
+
+.no-shadow--postWrapper {
+  .postWrapper {
+    box-shadow: none;
+  }
+}
+
+.height--100
+{
+  height: 100%;
+}
+

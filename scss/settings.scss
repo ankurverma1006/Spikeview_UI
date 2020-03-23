@@ -1,0 +1,72 @@
+/* Common  SCSS */
+@import "common/variable.scss";
+@import "common/grid";
+@import "common/icomoon";
+// @import "common/new-ico";
+@import "common/typo";
+@import "common/common";
+/*//Custom Mixins*/
+
+@import "magic/mixin";
+@import "magic/extends";
+@import "magic/animated-icons";
+@import "common/layout";
+/* //Bootstrap Custom Components SCSS */
+@import "component/icons";
+@import "component/tabs";
+@import "component/buttons";
+@import "component/form-controls";
+@import "component/dropdown";
+@import "component/modals";
+@import "component/breadcrumbs";
+@import "component/media";
+@import "component/success-promp";
+@import "component/notifications";
+@import "component/topbar";
+@import "component/animated-searchbar";
+@import "component/audio";
+
+/* //Components SCSS */
+
+
+
+@import "component/sidebar";
+@import "component/header/header";
+@import "component/header/header-after-login";
+@import "component/overlays";
+@import "component/animation";
+@import "component/view-switch";
+
+
+/* // Landing page SCSS */
+
+@import "landing/coming-soon";
+/* // Pages or partial SCSS */
+@import "pages/profile";
+@import "pages/tarun";
+@import "pages/edit-profile";
+@import "pages/chat";
+@import "pages/home";
+@import "pages/nidhi";
+@import "pages/groups";
+
+
+
+/* // Plugins SCSS */
+@import "component/plugins/animate";
+@import "component/plugins/switch";
+@import "component/plugins/checkbox";
+@import "component/plugins/slider";
+@import "component/plugins/map-suggestion";
+@import "component/plugins/img-cropper";
+//@import "component/plugins/datepicker-new";
+@import "component/plugins/datepicker";
+@import "component/plugins/toastr";
+@import "component/plugins/react-select";
+@import "component/plugins/hover-effects";
+@import "component/plugins/floating-label";
+@import "component/plugins/range-slider";
+@import "component/plugins/confirmation-box";
+@import "component/plugins/charts";
+@import "component/plugins/animated-carousel";
+

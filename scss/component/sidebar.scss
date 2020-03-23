@@ -1,0 +1,131 @@
+.sidebar
+{
+  position: relative;
+  z-index:2;
+  background-image: url("../img/sidebarBg.png");
+  background-repeat:no-repeat;
+  background-position: center;
+  // background-attachment: fixed;
+  background-size: cover;
+  max-width:615px;
+  width: 31%;
+  //width: 350px;
+  padding: $padding-x;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  @media(max-width: $breakpoint-mobile)
+  {
+    width: 100%;
+    background-position: 0 0;
+    min-height: 70vh;
+    margin-bottom: 20px;
+  }
+
+  
+  .overlay
+  {
+    position: absolute;
+    height:100%;
+    width:100%;
+    background-color: rgba($blue, 0.75);
+    z-index:-1;
+    top:0;
+    left: 0;
+  }
+  
+  .custom-slider
+  {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    max-width: 315px;
+    margin: 0 auto;
+    font-weight:400;
+    @media(max-width: $breakpoint-mobile)
+    {
+      align-items: flex-start;
+    }
+  }
+  .logo{
+    height:55px;
+    width:250px;
+    margin: 20px auto;
+    background-image: url(../img/logo-white.png);
+    background-repeat:no-repeat;
+    background-position: top center;
+    background-size: contain;
+    text-indent:-9999px;
+  }
+  
+  
+  .carousel-control
+  {
+    display: none;
+  }
+  
+  .carousel-indicators
+  {
+    bottom: -30px;
+    li
+    {
+      background: $indicator-default-bg;
+      -webkit-transition: ease-in-out 1s;
+      -moz-transition: ease-in-out 1s;
+      -ms-transition: ease-in-out 1s;
+      -o-transition: ease-in-out 1s;
+      transition: ease-in-out 1s;
+      transform: scale(0.6);
+      //width: 5px !important;
+      //height: 5px !important;
+      border: 0;
+      &.active
+      {
+        background-color: $white;
+      }
+    }
+  }
+  
+  .carousel-inner
+  {
+    min-height: 280px;
+    h3
+    {
+      font-family: 'Lato', sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+      opacity: 0.5;
+      color:$sidebar-gray;
+    }
+    .carouselTitle
+    {
+      font-size:18px;
+      text-transform: uppercase;
+      @media(min-width: 60em)
+      {
+        font-size:24px;
+      }
+    }
+    .carousel-content
+    {
+      font-size:1em;
+      font-style: italic;
+      @media(min-width: 60em)
+      {
+        font-size:16px;
+      }
+    }
+  }
+}
+
+.right-sidebar {
+  margin-top: 40px !important;
+  width: $profile-right-sidebar-width !important;
+  @media(max-width: $breakpoint-mobile) {
+    width: 100% !important;
+  }
+}
+
+

@@ -1,0 +1,127 @@
+/* variables */
+$colorClouds: #ecf0f1;
+$colorSilver: lighten($gray, 10%);
+$colorWhite: #fefefe;
+$colorPeterRiver: $blue;
+$colorConcrete: #95a5a6;
+$colorAsbestos: #7f8c8d;
+$colorWetAsphalt: #34495e;
+$borderRadius: 2px;
+$transitionDefault: 0.25s ease-out 0.10s;
+$border-color: darken($white, 2%);
+$off-white-color: darken($white, 1%);
+
+.notifications {
+  background: $white;
+  &:after {
+    border: 10px solid transparent;
+    border-bottom-color: $colorPeterRiver;
+    content: '';
+    display: block;
+    height: 0;
+    right: 5px;
+    position: absolute;
+    top: -18px;
+    width: 0;
+  }
+  
+  .notifications-list {
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    //margin:0 -10px;
+    .u--topDetails {
+      margin-bottom: 0;
+      align-items: center;
+      .user-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        &.defaultUser {
+          font-size: 4.3em;
+          background-color: transparent;
+          border: 0;
+        }
+      }
+    }
+    .ud--wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex: 1;
+      .nl--text {
+        flex: 1;
+        padding: 0 5px;
+        color: $gray-dark;
+        line-height: 1.2;
+      }
+    }
+    
+    .item {
+      width: 100%;
+      color: $gray;
+      cursor: default;
+      display: block;
+      position: relative;
+      padding: 15px;
+      background-color: $input-bg;
+      //&:nth-child(odd)
+      //{
+      //  background-color:$input-bg;
+      //}
+      &.read {
+        background-color: $white;
+      }
+      
+      &:before,
+      .details,
+      .button-dismiss {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      
+      .details {
+        margin-left: 10px;
+        white-space: normal;
+      }
+      
+      &.no-data {
+        display: none;
+        text-align: center;
+        background-color: lighten($brand-danger, 25%);
+        color: $white;
+        &:before {
+          display: none;
+        }
+      }
+      
+      &.expired {
+        color: $colorSilver;
+        &:before {
+          background: $colorSilver;
+        }
+      }
+    }
+    .dropdown-toggle {
+      font-size: 24px;
+      margin-top: -10px;
+      color: $gray;
+    }
+    
+    .c--time {
+      margin-top: 5px;
+      font-size: 1em;
+    }
+  }
+  
+  &.empty {
+    .notifications-list {
+      .no-data {
+        display: block;
+        padding: 10px;
+      }
+    }
+  }
+}
+

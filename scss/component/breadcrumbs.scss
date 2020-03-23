@@ -1,0 +1,19 @@
+.breadcrumb {
+  background-color: transparent;
+  padding: 0;
+  margin: 3*$gutter-space 0;
+  color: $gray;
+  > li {
+    + li:before {
+      content: '>'
+    }
+    a {
+      color: $gray-dark;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    &.active {
+      color: inherit;
+    }
+  }
+}

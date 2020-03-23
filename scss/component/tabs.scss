@@ -1,0 +1,41 @@
+.nav-tabs
+{
+  border: 0;
+  margin-bottom: 2rem;
+  li
+  {
+    margin-right:15px;
+    &.active
+    {
+      a
+      {
+        color: $tab-link-color-active !important;
+        border-bottom: 2px solid $tab-link-color-active !important;
+        background-color: transparent !important;
+      }
+    }
+  }
+  
+  li>a
+  {
+    color: $tab-link-color;
+    text-transform: uppercase;
+    opacity: 0.7;
+    border:0 !important;
+    border-bottom: 2px solid transparent !important;
+    border-bottom:2px solid transparent;
+    box-shadow: none;
+    padding: 3px 0;
+    font-size:0.9em;
+    font-weight:400;
+    &:hover, &:focus
+    {
+      color: $tab-link-color !important;
+      border-bottom:2px solid !important;
+      background-color: transparent !important;
+    }
+  }
+}
+
+
+

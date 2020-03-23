@@ -1,0 +1,82 @@
+.edit--me {
+  position: relative;
+  overflow: hidden;
+
+}
+
+.animated {
+  @include transition(ease-in-out, 0.5s);
+}
+
+.visiblity-hidden {
+  -webkit-transform: translate3d(0, -300px, 0);
+  -moz-transform: translate3d(0, -300px, 0);
+  -ms-transform: translate3d(0, -300px, 0);
+  -o-transform: translate3d(0, -300px, 0);
+  transform: translate3d(0, -300px, 0);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.a--show {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.content {
+  .editableFormControl {
+    @include transition(ease-in-out, 0.4s);
+    -webkit-transform: translate3d(0, 300px, 0);
+    -moz-transform: translate3d(0, 300px, 0);
+    -ms-transform: translate3d(0, 300px, 0);
+    -o-transform: translate3d(0, 300px, 0);
+    transform: translate3d(0, 300px, 0);
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    .form-control {
+      height: 100%;
+      min-height: 100%;
+    }
+  }
+  &.content--editable {
+    .editableFormControl {
+      @include transition(linear, 0.3s);
+      visibility: visible;
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    .btn-primary, .hide--me {
+      -webkit-transform: translate3d(0, -300px, 0);
+      -moz-transform: translate3d(0, -300px, 0);
+      -ms-transform: translate3d(0, -300px, 0);
+      -o-transform: translate3d(0, -300px, 0);
+      transform: translate3d(0, -300px, 0);
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .btn-primary, .hide--me {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+

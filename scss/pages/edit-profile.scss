@@ -1,0 +1,74 @@
+.editProfileForm
+{
+  max-width: 900px;
+  width: 80%;
+  padding: 0 !important;
+  .form-group
+  {
+    display: flex;
+    flex-wrap: wrap;
+    //align-items:center;
+    margin: 0;
+    margin-bottom: 1.5*$gutter-space;
+    //label{
+    //  padding:0 !important;
+    //  text-align: right;
+    //}
+    //.form-control
+    //{
+    //  margin-bottom:0 !important;
+    //}
+  }
+}
+
+.editBtnWrap {
+    margin-top: 30px;
+}
+
+
+.headingEProfile{
+  padding-left:$gutter-space;
+  color: $blue;
+  border: 0;
+  font-size:1.5em;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom:15px;
+}
+ @media (max-width: $breakpoint-tablet) {
+   .editBtnWrap {
+     .p0{
+       padding:0px;
+      }
+   }
+   .absolute-link{
+     position:static;
+   }
+ }
+
+
+.borderedBox{
+  border:2px dotted $border-color;
+  padding: $gutter-space 0;
+  margin-bottom:2*$gutter-space;
+  .form-group
+  {
+    &:nth-last-child(1)
+    {
+      margin-bottom: 0;
+    }
+  }
+  .form-control
+  {
+    margin-bottom:0 !important;
+  }
+}
+
+.flex-item--half
+{
+  &.seperator
+  {
+    border-left: 1px solid #ddd;
+    padding-left: 50px;
+  }
+}

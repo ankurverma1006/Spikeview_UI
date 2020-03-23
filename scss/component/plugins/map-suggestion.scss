@@ -1,0 +1,13 @@
+#PlacesAutocomplete__root {
+  flex: 1;
+  .form-control {
+    border-right: 0 !important;
+  }
+  
+  .input-group-addon {
+    border: 1px solid inherit;
+  }
+}
+#PlacesAutocomplete__autocomplete-container {
+  z-index: 100;
+}

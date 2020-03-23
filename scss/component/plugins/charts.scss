@@ -1,0 +1,27 @@
+.highcharts-grid-line {
+  stroke: $gray;
+}
+
+.iconWrapper {
+  // @include centeredBox();
+  // @include circle(flex, 30px, 1px, solid, $border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $icon-color-default;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 100%;
+  color: $icon-color-default;
+  .chartIcon {
+    font-size: 18px;
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+.highcharts-axis-labels.highcharts-xaxis-labels {
+  top: -5px !important;
+}
